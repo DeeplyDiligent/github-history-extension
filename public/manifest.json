@@ -1,6 +1,6 @@
 {
   "short_name": "Github History",
-  "content_security_policy": "script-src 'self' 'sha256-Oas8v+RNTG1lAbCRsxLlvVpfoJjT1Go2DPdS3kMyiPI='; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'sha256-A2p5ajD3NJiLtkkgT53bfVQCprSfIyekAyKQNpTMfqk='; object-src 'self'",
   "name": "Github History",
   "manifest_version": 2,
   "browser_action": {
@@ -8,22 +8,15 @@
     "default_icon": "favicon.ico"
   },
   "background": {
-    "scripts": [
-      "backgroundScripts/background.js"
-    ],
+    "scripts": ["backgroundScripts/background.js"],
     "persistent": true
   },
-  "permissions": [
-  ],
+  "permissions": ["storage","tabs"],
   "web_accessible_resources": ["index.html"],
   "content_scripts": [
     {
-      "matches": [
-        "https://github.com/"
-      ],
-      "js": [
-        "inject/inject.js"
-      ]
+      "matches": ["https://github.com/*"],
+      "js": ["inject/inject.js"]
     }
   ],
   "debug": true,

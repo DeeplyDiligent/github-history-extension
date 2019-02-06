@@ -1,7 +1,9 @@
 import { getHistory } from "./github";
 import { getLanguage, getLanguageDependencies } from "./language-detector";
+/*global chrome*/
 
 const [repo, sha, path] = getParams();
+console.log(repo, sha, path)
 const lang = getLanguage(path);
 const root = document.getElementById("root");
 const message = document.getElementById("message");
@@ -51,15 +53,18 @@ function loadLanguage(lang) {
   return depPromise.then(() => import(`prismjs/components/prism-${lang}`));
 }
 
-function getParams() {
-  const [
-    ,
-    owner,
-    reponame,
-    action,
-    sha,
-    ...paths
-  ] = window.location.pathname.split("/");
+function getLocation() {
+  return new Promise(resolve => {
+    chrome.storage.local.get("githubUrl", function(result) {
+      console.log(result);
+      resolve(result.githubUrl);
+    });
+  });
+}
+
+async function getParams() {
+  let location = await getLocation();
+  const [, owner, reponame, action, sha, ...paths] = location.split("/");
 
   if (action !== "commits" && action !== "blob") {
     return [];
