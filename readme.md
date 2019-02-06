@@ -1,6 +1,8 @@
 # [GitHub History](https://github-history.netlify.com)
 
-Browse the history of any file from GitHub with style
+Browse the history of any file from GitHub with style, now as a chrome extension! Get it at:
+
+https://chrome.google.com/webstore/detail/github-history/akchjlfcomljejobobpiiefpaimhhnmp
 
 <div align="center">
 <a href="https://github-history.netlify.com/babel/babel/blob/master/packages/babel-core/test/browserify.js">
