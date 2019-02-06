@@ -1,15 +1,31 @@
 {
   "short_name": "Github History",
+  "content_security_policy": "script-src 'self' 'sha256-YcQmyTC2Q4VraVXZkgUnBC8G5J1IWA9tI21c+Jy8L24='; object-src 'self'",
   "name": "Github History",
-  "icons": [
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Github History",
+    "default_icon": "favicon.ico"
+  },
+  "background": {
+    "scripts": [
+      "backgroundScripts/background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+  ],
+  "web_accessible_resources": ["index.html"],
+  "content_scripts": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "matches": [
+        "https://github.com/"
+      ],
+      "js": [
+        "inject/inject.js"
+      ]
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "debug": true,
+  "version": "1.0"
 }
