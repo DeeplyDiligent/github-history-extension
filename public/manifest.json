@@ -1,6 +1,6 @@
 {
   "short_name": "Github History",
-  "content_security_policy": "script-src 'self' 'sha256-YcQmyTC2Q4VraVXZkgUnBC8G5J1IWA9tI21c+Jy8L24='; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'sha256-Oas8v+RNTG1lAbCRsxLlvVpfoJjT1Go2DPdS3kMyiPI='; object-src 'self'",
   "name": "Github History",
   "manifest_version": 2,
   "browser_action": {
