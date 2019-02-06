@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["inject/inject.js"]
+      "js": ["plugins/jquery.min.js","inject/inject.js"]
     }
   ],
   "debug": true,
