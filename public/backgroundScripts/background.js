@@ -1,7 +1,7 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
-    console.log("button clicked");
-    chrome.tabs.create({
-      url: "index.html"
-    });
+  url = new URL(tab.url)
+  chrome.tabs.update({
+    active:true,
+    url: "index.html?url="+url.pathname
   });
-  
+});

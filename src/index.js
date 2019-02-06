@@ -8,7 +8,7 @@ const message = document.getElementById("message");
 
 if (!repo) {
   // show docs
-  message.innerHTML = `<p>URL should be something like https://github-history.netlify.com/user/repo/commits/master/path/to/file.js</p>`;
+  message.innerHTML = `<p>Please go to a file on github, then click this button!</p>`;
 } else {
   // show loading
   message.innerHTML = `<p>Loading <strong>${repo}</strong> <strong>${path}</strong> history...</p>`;
@@ -52,14 +52,10 @@ function loadLanguage(lang) {
 }
 
 function getParams() {
-  const [
-    ,
-    owner,
-    reponame,
-    action,
-    sha,
-    ...paths
-  ] = window.location.pathname.split("/");
+  let url = new URL(window.location.href);
+  const [, owner, reponame, action, sha, ...paths] = url.searchParams
+    .get("url")
+    .split("/");
 
   if (action !== "commits" && action !== "blob") {
     return [];
