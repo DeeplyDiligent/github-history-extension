@@ -10,4 +10,5 @@ https://chrome.google.com/webstore/detail/github-history/akchjlfcomljejobobpiief
 </a>
 </div>
 
-> Follow [@pomber](https://twitter.com/pomber) for updates
+> Follow [@pomber](https://twitter.com/pomber) for app updates
+> Follow [@deeplydiligent](https://github.com/DeeplyDiligent/) for extension updates
