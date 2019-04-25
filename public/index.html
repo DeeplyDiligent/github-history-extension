@@ -14,6 +14,10 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta
+      name="description"
+      content="Quickly browse the history of a file from GitHub, GitLab, Bitbucket or any git repository"
+    />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -23,7 +27,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Github History</title>
+    <title>Git History</title>
     <style>
       html {
         height: 100%;
@@ -45,14 +49,6 @@
         height: 100%;
       }
 
-      #message {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-      }
-
       footer {
         position: fixed;
         right: 10px;
@@ -61,27 +57,12 @@
         text-align: center;
       }
 
-      footer a {
+      a {
         color: rgb(173, 219, 103);
       }
     </style>
   </head>
   <body>
-    <div id="root"><div id="message"></div></div>
-    <footer>
-      <a href="https://github.com/pomber/github-history">GitHub History</a
-      ><br />by <a href="https://twitter.com/pomber">@pomber</a>
-      <br />Extension by <a href="https://github.com/DeeplyDiligent">@DeeplyDiligent</a>
-    </footer>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="root"></div>
   </body>
 </html>

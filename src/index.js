@@ -1,8 +1,7 @@
-import { getHistory } from "./github";
-import { getLanguage, getLanguageDependencies } from "./language-detector";
+import App from "./app";
+import React from "react";
+import ReactDOM from "react-dom";
 
-const [repo, sha, path] = getParams();
-const lang = getLanguage(path);
 const root = document.getElementById("root");
 const message = document.getElementById("message");
 
